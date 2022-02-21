@@ -1,0 +1,25 @@
+.result {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 60%;
+  padding: 0 20%;
+  gap: 2rem;
+}
+
+.monster-cards {
+  width: 13rem;
+  height: 10rem;
+  padding: 1rem;
+  border-radius: 5px;
+  background-color: #ffffff9f;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+body {
+  background-color: rgb(29, 36, 29);
+}
