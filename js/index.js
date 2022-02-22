@@ -20,7 +20,15 @@ async function getMonsters() {
                         <h2>${monsters[i].name}</h2>
                         <p>Size: ${monsters[i].type}</p>
                         <p>Species: ${monsters[i].species}</p>
+                        <p class="loc">Location: ${monsters[i].locations[0].name}</p>
                     </div></a>`
+
+                    const locationsLength = monsters[i].locations.length;
+
+                        if(locationsLength > 1) {
+                            const locContainer = document.querySelectorAll(".loc");
+                            locContainer[i].innerHTML += ` (...)`
+                        }
         }
 
     } catch (error) {
@@ -29,3 +37,4 @@ async function getMonsters() {
 }
 
 getMonsters();
+

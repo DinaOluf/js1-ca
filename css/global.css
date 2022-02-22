@@ -12,6 +12,25 @@ h1 {
   color: black;
   text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white,
     1px 1px 0 white;
+  width: 50%;
+}
+
+header {
+  display: inline-flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header a {
+  font-size: 2em;
+  color: white;
+  text-decoration: underline;
+  align-self: center;
+}
+
+header a:hover {
+  color: rgb(204, 204, 204);
 }
 
 p {
@@ -32,8 +51,8 @@ img {
 .error {
   font-size: large;
   padding: 2rem;
-  border: solid black 1px;
-  background-color: rgb(252, 125, 125);
+  border-radius: 5px;
+  background-color: rgba(255, 109, 109, 0.76);
 }
 
 .loading {

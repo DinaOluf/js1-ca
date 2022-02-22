@@ -10,7 +10,37 @@
 </head>
 <body>
     <div id="messageContainer"></div>
-
+    <img src="/MonsterHunterHeader.jpg">
+    <header>
+        <button id="back"><< Back</button>
+        <a href="contact.html">Contact</a>
+    </header>
+    <section>
+        <h1>Contact</h1>
+        <form>
+            <label>
+                Name 
+                <input name="yourName" id="yourName">
+                <span class="name-err-container"></span>
+            </label>
+            <label class="subject-label">
+                Subject (min. 10 characters) 
+                <input name="subject" id="subject">
+                <span class="subject-err-container"></span>
+            </label>
+            <label class="email-label">
+                Email 
+                <input name="email" id="email">
+                <span class="email-err-container"></span>
+            </label>
+            <label class="adress-label">
+                Address (min. 25 characters) 
+                <input name="address" id="address">
+                <span class="address-err-container"></span>
+            </label>
+            <button id="submit-btn">Submit</button>
+        </form>
+    </section>
         <script src="js/contact.js"></script>
 </body>
 </html>

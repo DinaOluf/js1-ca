@@ -4,3 +4,12 @@ body {
   text-shadow: 1px 1px 3px black;
   font-size: 1.5rem;
 }
+
+header a {
+  font-size: 1.3em;
+  padding: 2rem 0 0 0;
+}
+
+#back {
+  height: 2rem;
+}
