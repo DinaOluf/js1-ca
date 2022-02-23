@@ -11,7 +11,7 @@ async function getMonster() {
         const response = await fetch(details_url);
         const details = await response.json();
 
-        detailsContainer.innerHTML = `<h1>${details.name}</h1>
+        detailsContainer.innerHTML = `<div class="image-container"><h1>${details.name}</h1><div>
                         <p>Size: ${details.type}</p>
                         <p>Species: ${details.species}</p>
                         <p>Description: ${details.description}</p>
