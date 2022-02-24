@@ -74,6 +74,6 @@ function submitForm(event){
 form.addEventListener("submit", submitForm);
 
 
-document.getElementById('back').addEventListener('click', () => {
+document.getElementById("back").addEventListener("click", () => {
   history.back();
 });

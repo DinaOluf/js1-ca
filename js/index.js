@@ -7,7 +7,7 @@ function displayError(message = "Unknown error") {
     return `<div class="error">${message}</div>`;
 }
 
-async function getMonsters() {
+async function getMonsterCards() {
     try {
         const response = await fetch(API_URL);
         const monsters = await response.json();
@@ -19,16 +19,15 @@ async function getMonsters() {
             resultContainer.innerHTML += `<a href="details.html?id=${monsters[i].id}"><div class="monster-cards">
                         <h2>${monsters[i].name}</h2>
                         <p>Size: ${monsters[i].type}</p>
-                        <p>Species: ${monsters[i].species}</p>
+                        <p class="species">Species: ${monsters[i].species}</p>
                         <p class="loc">Location: ${monsters[i].locations[0].name}</p>
                     </div></a>`
 
-                    const locationsLength = monsters[i].locations.length;
+            if(monsters[i].locations.length > 1) {
+                const locContainer = document.querySelectorAll(".loc");
 
-                        if(locationsLength > 1) {
-                            const locContainer = document.querySelectorAll(".loc");
-                            locContainer[i].innerHTML += ` (...)`
-                        }
+                locContainer[i].innerHTML += ` (...)`
+            }
         }
 
     } catch (error) {
@@ -36,5 +35,5 @@ async function getMonsters() {
 }
 }
 
-getMonsters();
+getMonsterCards();
 
