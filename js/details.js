@@ -11,6 +11,8 @@ async function getMonsterDetails() {
         const response = await fetch(details_url);
         const details = await response.json();
 
+        changeTitle(details);
+
         getHtml(details);
 
         getImageBySpecies(details);
@@ -21,6 +23,10 @@ async function getMonsterDetails() {
 }
 
 getMonsterDetails();
+
+function changeTitle(details){
+    document.title = "Monster Details: " + details.name;
+}
 
 function getHtml(details) {
     const detailsContainer = document.querySelector(".details-container");
